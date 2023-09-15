@@ -18,7 +18,8 @@ struct MovieCarousel: View {
                                 }
                             label: {
                                 Image(index.imageName)
-                                    .aspectRatio(contentMode: .fill)
+                                    .resizable()
+                                    .ignoresSafeArea(.all)
                                     .overlay{
                                         Text("\(index.name)")
                                             .font(.system(size: 30))
